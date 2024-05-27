@@ -55,3 +55,11 @@
 
     Folders:
     If things are getting a little too complex with too many tweaks, we can organise them in the folder.
+
+    To create another folder, call useControls again but with a different name and put whatever we want in it like a scale.
+
+    If we want to create a folder inside a folder, we can do it with the folder function that we can import from 'leva'.
+
+    Monitoring R3F performance:
+
+    install r3f-perf: npm install r3f-perf
