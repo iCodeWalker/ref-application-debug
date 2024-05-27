@@ -1,5 +1,5 @@
 import { OrbitControls } from '@react-three/drei';
-import { useControls } from 'leva';
+import { useControls, button } from 'leva';
 
 export default function Experience()
 {
@@ -16,7 +16,10 @@ export default function Experience()
         step: 0.01,
         joystick:"invertY" // To invert the y-direction
     },
-    color : '#ff0000'
+    color : '#ff0000',
+    visible : true,
+    clickMe: button(() => console.log('button clicked')),
+    choice : { options: ['a','b','c']}
 })
 
     return <>
@@ -27,7 +30,7 @@ export default function Experience()
         <ambientLight intensity={ 0.5 } />
 
         {/* <mesh position-x={controls.position}> */}
-        <mesh position={[controls.position.x, controls.position.y, controls.position.z]}>
+        <mesh position={[controls.position.x, controls.position.y, controls.position.z]} visible={controls.visible}>
             <sphereGeometry />
             <meshStandardMaterial color={controls.color} />
         </mesh>

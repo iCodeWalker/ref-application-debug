@@ -34,3 +34,24 @@
     value : {x : -2, y: 0}
 
     We can use colors. Add acolor property in the useControls and a color variable in the destructuring.
+    We can use different color formats like:
+        1. rgb(255,0,0)
+        2. 'orange'
+        3. hsl(100deg, 100%, 50%)
+        4. hsla(100deg, 100%, 50%, 0.5)
+        5. { r: 200, g: 106, b: 125, a:0.4}
+
+    Boolean:
+
+    Add a visible property to the useControls and destructure it.
+
+    visible: true
+
+    Button:
+    We create a button that will call a function once clicked
+
+    Select:
+    We can create a select input by setting an array on the 'options' property
+
+    Folders:
+    If things are getting a little too complex with too many tweaks, we can organise them in the folder.
