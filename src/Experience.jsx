@@ -6,6 +6,7 @@ import Cube from './cube';
 export default function Experience()
 {
     // r3f-perf visibility
+    // This is used to monitor the performance of the application.
     const { perfVisible } = useControls({
         perfVisible: true
     })
@@ -33,7 +34,7 @@ export default function Experience()
 
     // Add one more folder to leva GUI
 
-    const {scale} = useControls('cube', {
+    const sphereControls = useControls('cube', {
         scale: 
         {
             value: 1.5,
@@ -67,6 +68,12 @@ export default function Experience()
         {/* Make a custom component for the Cube so that it can be in the component tree */}
         {/* Using the extension we can now update the props value directly in the browser without the need to update the compoent  at the code level. */}
         <Cube scale={2}/>
+
+        {/* For leva GUI  use */}
+        <mesh position-x={ 2 } scale={sphereControls.scale}>
+            <boxGeometry />
+            <meshStandardMaterial color="mediumpurple" />
+        </mesh> 
 
 
         <mesh position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 10 }>
