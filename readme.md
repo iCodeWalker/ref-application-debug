@@ -23,6 +23,9 @@
 
 ## Debug UI with Leva
 
+    We previously used dat-gui or lil-gui for three.js applications.
+    But We can use leva made for react applications.
+
     npm i leva
 
     Tweaking a value, will result in the component re-rendering.
@@ -44,6 +47,8 @@
         3. hsl(100deg, 100%, 50%)
         4. hsla(100deg, 100%, 50%, 0.5)
         5. { r: 200, g: 106, b: 125, a:0.4}
+
+    Note : For using alpha property on the color We have to use the 'opacity' property on the material and set the 'transparent' proprty to true.
 
     Boolean:
 

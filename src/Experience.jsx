@@ -11,6 +11,7 @@ export default function Experience()
     })
 
     // const controls = useControls({ position: -2})
+    // OR
     // const { position } = useControls({ position : -2 })
 
     const controls = useControls('sphere',{
@@ -25,7 +26,9 @@ export default function Experience()
         color : '#ff0000',
         visible : true,
         clickMe: button(() => console.log('button clicked')),
-        choice : { options: ['a','b','c']}
+        choice : { options: ['a','b','c']},
+        // ####### For making sphere tranaparent ########
+        opacity: 0.5
     })
 
     // Add one more folder to leva GUI
@@ -44,14 +47,16 @@ export default function Experience()
         
         { perfVisible && <Perf position='top-left' />}
         <OrbitControls makeDefault />
-
         <directionalLight position={ [ 1, 2, 3 ] } intensity={ 1.5 } />
         <ambientLight intensity={ 0.5 } />
 
         {/* <mesh position-x={controls.position}> */}
+        {/* OR */}
+        {/* <mesh position-x={position}> */}
+
         <mesh position={[controls.position.x, controls.position.y, controls.position.z]} visible={controls.visible}>
             <sphereGeometry />
-            <meshStandardMaterial color={controls.color} />
+            <meshStandardMaterial color={controls.color} opacity={controls.opacity} transparent={true}/>
         </mesh>
 
         {/* <mesh position-x={ 2 } scale={ 1.5 }>
