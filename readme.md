@@ -11,11 +11,15 @@
     In /src/index.js, import StrictMode from react
     import {StrictMode} from 'react';
 
-    StrictMode will be ignored once the application is built
+    Note : Don't have to worry about the StrictMode as StrictMode will be ignored once the application is built
 
 ## Browser Extenstions
 
     React Developer tools extention will help us check and modify react components live.
+
+        Make a custom component for the Cube so that it can be in the component tree.
+
+        Using the extension we can now update the props value directly in the browser without the need to update the compoent  at the code level.
 
 ## Debug UI with Leva
 

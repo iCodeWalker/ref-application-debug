@@ -1,6 +1,7 @@
 import { OrbitControls } from '@react-three/drei';
 import { useControls, button } from 'leva';
 import { Perf } from 'r3f-perf';
+import Cube from './cube';
 
 export default function Experience()
 {
@@ -53,10 +54,15 @@ export default function Experience()
             <meshStandardMaterial color={controls.color} />
         </mesh>
 
-        <mesh position-x={ 2 } scale={ 1.5 }>
+        {/* <mesh position-x={ 2 } scale={ 1.5 }>
             <boxGeometry />
             <meshStandardMaterial color="mediumpurple" />
-        </mesh>
+        </mesh> */}
+
+        {/* Make a custom component for the Cube so that it can be in the component tree */}
+        {/* Using the extension we can now update the props value directly in the browser without the need to update the compoent  at the code level. */}
+        <Cube scale={2}/>
+
 
         <mesh position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 10 }>
             <planeGeometry />
